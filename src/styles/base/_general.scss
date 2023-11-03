@@ -1,4 +1,49 @@
 h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.page-body {
+  background-color: #131313;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+  box-sizing: border-box;
+}
+
+.skewed-filled-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px 20px 30px;
+  min-width: 293px;
+  border: none;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 150%;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  background: none;
+
+  &__icon {
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+
+    &--big {
+      left: 0;
+      width: 282px;
+    }
+
+    &--small {
+      right: 0;
+      width: 24px;
+    }
+  }
 }

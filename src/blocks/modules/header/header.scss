@@ -2,13 +2,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  padding: 28px 100px;
   width: 100%;
   z-index: 100;
-  display: flex;
-  align-items: center;
   background-color: #131313;
-  box-sizing: border-box;
+
+  &__wrapper {
+    padding: 28px 100px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+  }
 
   &__burger {
     display: none;
@@ -70,43 +73,12 @@
   }
 
   &__application {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     margin-left: 12px;
-    padding: 20px 40px 20px 30px;
-    min-width: 293px;
-    border: none;
-    color: #fff;
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 150%;
-    text-transform: uppercase;
-    box-sizing: border-box;
-    background: none;
 
     // &--not-tablet {}
 
     &--tablet {
       display: none;
-    }
-  }
-
-  &__application-icon {
-    position: absolute;
-    height: 100%;
-    z-index: -1;
-
-    &--big {
-      left: 0;
-      width: 282px;
-    }
-
-    &--small {
-      right: 0;
-      width: 24px;
     }
   }
 
