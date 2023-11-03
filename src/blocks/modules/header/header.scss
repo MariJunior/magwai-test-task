@@ -25,6 +25,7 @@
   //   &--bottom {}
   // }
 
+  // TODO: добавить ховер
   &__logo {
     display: flex;
     width: 156px;
@@ -37,6 +38,7 @@
     height: auto;
   }
 
+  // TODO: добавить ховер
   &__phone {
     position: relative;
     margin-left: auto;
@@ -93,15 +95,17 @@
     display: flex;
     align-items: center;
     column-gap: clamp(20px, 43px, 43px);
+    flex-wrap: wrap;
+    align-content: center;
   }
 
   &__list-item {
     list-style: none;
   }
 
+  // TODO: добавить ховер и выделение активной ссылки
   &__list-item-link {
     color: #fff;
-    font-family: Montserrat;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;

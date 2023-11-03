@@ -4,6 +4,7 @@ h1, h2, h3, h4, h5, h6, ul {
 }
 
 .page-body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
   background-color: #131313;
 }
 
@@ -14,6 +15,7 @@ h1, h2, h3, h4, h5, h6, ul {
   box-sizing: border-box;
 }
 
+// TODO: добавить ховер
 .skewed-filled-button {
   position: relative;
   display: flex;
@@ -30,6 +32,7 @@ h1, h2, h3, h4, h5, h6, ul {
   text-transform: uppercase;
   box-sizing: border-box;
   background: none;
+  cursor: pointer;
 
   &__icon {
     position: absolute;

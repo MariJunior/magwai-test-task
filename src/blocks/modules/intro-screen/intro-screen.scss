@@ -1,4 +1,4 @@
-.intro-section {
+.intro-screen {
   position: relative;
   height: 100vh;
 
@@ -11,10 +11,13 @@
     height: calc(100% - 116px);
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
+    // TODO: добавить подключение @2x
     background-image: url('/img/space-background.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -5;
+    // TODO: добавить лёгкую анимацию фона 
+    // filter: grayscale(), например, чтобы как будто светились огоньки
   }
 
   &__background {
@@ -37,7 +40,6 @@
   &__title {
     position: relative;
     color: #fff;
-    font-family: Montserrat;
     font-size: 42px;
     font-weight: 700;
     text-transform: uppercase;
@@ -47,7 +49,6 @@
     position: relative;
     margin: 0;
     color: #fff;
-    font-family: Montserrat;
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
