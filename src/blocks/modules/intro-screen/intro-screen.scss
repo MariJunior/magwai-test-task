@@ -2,6 +2,17 @@
   position: relative;
   height: 100vh;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 520px;
+    background-image: linear-gradient(0deg, #131313 0%, rgba(19, 19, 19, 0.00) 100%);
+    z-index: -4;
+  }
+
   &__background-wrapper {
     position: absolute;
     // TODO: заменить на динамичную переменную — высоту хедера
@@ -16,8 +27,6 @@
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -5;
-    // TODO: добавить лёгкую анимацию фона 
-    // filter: grayscale(), например, чтобы как будто светились огоньки
   }
 
   &__background {
