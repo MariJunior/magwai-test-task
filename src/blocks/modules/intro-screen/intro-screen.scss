@@ -22,8 +22,7 @@
     height: calc(100% - 116px);
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-    // TODO: добавить подключение @2x
-    background-image: url('/img/space-background.jpg');
+    background-image: image-set('/img/space-background.jpg' 1x, '/img/space-background@2x.jpg' 2x, '/img/space-background@3x.jpg' 3x);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -5;
