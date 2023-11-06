@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 100;
-  background-color: #131313;
+  background-color: var(--color-darkgray);
 
   &__wrapper {
     padding: 28px 100px;
@@ -64,13 +64,13 @@
     &--border {
       width: 100%;
       height: 60px;
-      stroke: #fff;
+      stroke: var(--color-white);
     }
 
     &--phone {
       width: 32px;
       height: 32px;
-      fill: #fff;
+      fill: var(--color-white);
     }
   }
 
@@ -105,7 +105,7 @@
 
   // TODO: добавить ховер и выделение активной ссылки
   &__list-item-link {
-    color: #fff;
+    color: var(--color-white);
     font-size: 14px;
     font-style: normal;
     font-weight: 700;

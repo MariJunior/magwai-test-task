@@ -2,7 +2,7 @@
   padding: 135px 100px 255px;
 
   &__title {
-    color: #fff;
+    color: var(--color-white);
     font-size: 42px;
     font-weight: 700;
     text-transform: uppercase;
@@ -44,7 +44,7 @@
     flex-direction: column;
     row-gap: 20px;
     padding: 25px 25px 30px;
-    background-color: #fff;
+    background-color: var(--color-white);
   }
 
   &__title {
@@ -54,7 +54,7 @@
     line-height: 26px;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: #171717;
+    color: var(--color-black);
   }
 
   &__lead {
@@ -62,21 +62,21 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
-    color: #171717;
+    color: var(--color-black);
   }
 
   &__preview {
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    color: #666;
+    color: var(--color-gray);
   }
 
   &__info {
     font-size: 12px;
     font-weight: 400;
     line-height: 24px;
-    color: #666;
+    color: var(--color-gray);
   }
 
   &__author {
@@ -94,8 +94,8 @@
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    color: #fff;
-    background-color: #171717;
+    color: var(--color-white);
+    background-color: var(--color-black);
     box-sizing: border-box;
   }
 }

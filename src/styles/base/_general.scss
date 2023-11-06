@@ -1,3 +1,14 @@
+:root {
+  --color-white: #fff;
+  --color-black: #171717;
+  --color-darkgray: #131313;
+  --color-gray: #666;
+
+  --max-width-desktop: 1920px;
+  --max-width-tablet: 768px;
+  --min-width-mobile: 360px;
+}
+
 h1, h2, h3, h4, h5, h6, ul {
   margin: 0;
   padding: 0;
@@ -5,13 +16,13 @@ h1, h2, h3, h4, h5, h6, ul {
 
 .page-body {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
-  background-color: #131313;
+  background-color: var(--color-darkgray);
 }
 
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1920px;
+  max-width: var(--max-width-desktop);
   box-sizing: border-box;
 }
 
@@ -24,7 +35,7 @@ h1, h2, h3, h4, h5, h6, ul {
   padding: 20px 40px 20px 30px;
   min-width: 293px;
   border: none;
-  color: #fff;
+  color: var(--color-white);
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 700;
