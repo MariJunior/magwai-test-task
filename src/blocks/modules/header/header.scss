@@ -1,16 +1,16 @@
 .page-header {
   position: fixed;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 100;
   background-color: var(--color-darkgray);
 
   &__wrapper {
-    padding: 28px 100px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
-    box-sizing: border-box;
+    padding: 28px 100px;
   }
 
   &__burger {
@@ -40,11 +40,11 @@
 
   // TODO: добавить ховер
   &__phone {
+    box-sizing: border-box;
     position: relative;
-    margin-left: auto;
     width: 93px;
     height: 60px;
-    box-sizing: border-box;
+    margin-left: auto;
 
     // &--not-tablet {
     // }
@@ -93,10 +93,10 @@
 
   &__list {
     display: flex;
-    align-items: center;
-    column-gap: clamp(20px, 43px, 43px);
     flex-wrap: wrap;
     align-content: center;
+    align-items: center;
+    column-gap: clamp(20px, 43px, 43px);
   }
 
   &__list-item {
