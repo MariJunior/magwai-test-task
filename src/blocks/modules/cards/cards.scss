@@ -26,15 +26,17 @@
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
   &__cover {
     width: 100%;
     height: 185px;
+    overflow: hidden;
 
     img {
-      object-fit: cover;
+      width: 100%;
+      height: auto;
+      min-height: 100%;
       object-position: center center;
     }
   }
@@ -42,12 +44,14 @@
   &__content {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    height: 435px;
     padding: 25px 25px 30px;
     background-color: var(--color-white);
+    box-sizing: border-box;
   }
 
   &__title {
+    margin-bottom: 20px;
     font-family: Mulish, Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 700;
@@ -58,7 +62,8 @@
   }
 
   &__lead {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
     font-size: 16px;
     font-weight: 400;
     line-height: 26px;
@@ -66,13 +71,22 @@
   }
 
   &__preview {
+    margin-top: 0;
+    margin-bottom: auto;
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     color: var(--color-gray);
+    // хак для работы свойства line-clamp
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
   }
 
   &__info {
+    margin-top: 0;
+    margin-bottom: 25px;
     font-size: 12px;
     font-weight: 400;
     line-height: 24px;
@@ -97,5 +111,61 @@
     color: var(--color-white);
     background-color: var(--color-black);
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 1600px) {
+  .cards__list {
+    grid-template-columns: repeat(4, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 1370px) {
+  .cards__list {
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: $min-width-tablet) {
+  .cards {
+    padding: 45px 40px 155px;
+
+    &__title {
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, minmax(250px, 1fr));
+      gap: 25px 20px;
+    }
+  }
+
+  .card {
+    &__preview {
+      -webkit-line-clamp: 5;
+    }
+  }
+}
+
+@media (max-width: $max-width-mobile) {
+  .cards {
+    padding: 48px 16px 43px;
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-bottom: 38px;
+    }
+  }
+
+  .card {
+    &__preview {
+      -webkit-line-clamp: 6;
+    }
   }
 }
