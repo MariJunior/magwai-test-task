@@ -3,10 +3,6 @@
   --color-black: #171717;
   --color-darkgray: #131313;
   --color-gray: #666;
-
-  --max-width-desktop: 1920px;
-  --max-width-tablet: 768px;
-  --min-width-mobile: 360px;
 }
 
 h1, h2, h3, h4, h5, h6, ul {
@@ -22,7 +18,8 @@ h1, h2, h3, h4, h5, h6, ul {
 .container {
   margin: 0 auto;
   width: 100%;
-  max-width: var(--max-width-desktop);
+  min-width: $min-width-mobile;
+  max-width: $max-width-desktop;
   box-sizing: border-box;
 }
 
@@ -58,6 +55,51 @@ h1, h2, h3, h4, h5, h6, ul {
     &--small {
       right: 0;
       width: 24px;
+    }
+  }
+}
+
+@media (max-width: $min-width-tablet) {
+  .skewed-filled-button {
+    width: clamp(200px, 100%, 293px);
+    min-width: auto;
+
+    &__icon {
+      &--big {
+        width: clamp(200px, 100%, 282px);
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-mobile) {
+  .skewed-filled-button {
+    padding: 14px 30px 14px 20px;
+    width: auto;
+    min-width: 228px;
+
+    &__icon {
+      &--big {
+        width: 220px;
+      }
+
+      &--small {
+        width: 19px;
+      }
+    }
+
+    &--fullwidth {
+      width: 100%;
+
+      &__icon {
+        &--big {
+          width: 100%;
+        }
+
+        &--small {
+          display: none;
+        }
+      }
     }
   }
 }
