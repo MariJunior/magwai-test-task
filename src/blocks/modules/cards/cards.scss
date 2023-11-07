@@ -79,9 +79,9 @@
     color: var(--color-gray);
 
     // хак для работы свойства line-clamp
-    display: box;
+    display: -webkit-box; // stylelint-disable property-no-vendor-prefix
     -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: vertical; // stylelint-disable property-no-vendor-prefix
     overflow-y: hidden;
   }
 
@@ -98,7 +98,6 @@
     font-weight: 700;
   }
 
-  // TODO: добавить ховер
   &__continue {
     box-sizing: border-box;
     display: flex;
@@ -112,6 +111,11 @@
     text-decoration: none;
     color: var(--color-white);
     background-color: var(--color-black);
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: var(--color-gray);
+    }
   }
 }
 

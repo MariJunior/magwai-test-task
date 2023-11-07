@@ -17,19 +17,16 @@
     display: none;
   }
 
-  // &__burger-item {
-  //   &--top {}
-
-  //   &--middle {}
-
-  //   &--bottom {}
-  // }
-
-  // TODO: добавить ховер
   &__logo {
+    flex-shrink: 0;
     display: flex;
     width: 156px;
     height: 60px;
+    transition: filter 0.2s ease;
+
+    &:hover {
+      filter: hue-rotate(308deg) invert(80%);
+    }
   }
 
   &__logo-icon {
@@ -38,16 +35,17 @@
     height: auto;
   }
 
-  // TODO: добавить ховер
   &__phone {
     box-sizing: border-box;
     position: relative;
     width: 93px;
     height: 60px;
     margin-left: auto;
+    transition: transform 0.2s ease;
 
-    // &--not-tablet {
-    // }
+    &:hover {
+      transform: skew(-7deg, 7deg) scale(1.1);
+    }
 
     &--tablet {
       display: none;
@@ -59,7 +57,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    opacity: 0.7;
+    opacity: 0.4;
 
     &--border {
       width: 100%;
@@ -74,10 +72,12 @@
     }
   }
 
+  &__phone-border-big {
+    display: none;
+  }
+
   &__application {
     margin-left: 12px;
-
-    // &--not-tablet {}
 
     &--tablet {
       display: none;
@@ -103,8 +103,8 @@
     list-style: none;
   }
 
-  // TODO: добавить ховер и выделение активной ссылки
   &__list-item-link {
+    position: relative;
     color: var(--color-white);
     font-size: 14px;
     font-style: normal;
@@ -112,5 +112,250 @@
     line-height: 150%;
     text-transform: uppercase;
     text-decoration: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      height: 2px;
+      width: 0;
+      background-color: var(--color-white);
+      transition: width 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: $max-width-tablet) {
+  .page-header {
+    &__wrapper {
+      padding: 30px 50px 20px;
+    }
+
+    &__burger {
+      position: relative;
+      display: block;
+      padding: 5px 3px;
+      width: 37px;
+      height: 31px;
+      border: none;
+      box-sizing: border-box;
+      background: none;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    &__burger-item {
+      position: absolute;
+      left: 0;
+      height: 3px;
+      border-radius: 2px;
+      background-color: var(--color-white);
+      transition-property: width, transform;
+      transition-timing-function: ease, ease;
+      transition-duration: 0.3s, 0.3s;
+      z-index: 5;
+
+      &--top {
+        top: 0;
+        width: 50%;
+        transition-duration: 0.35s, 0.3s;
+      }
+
+      &--middle {
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        transition-duration: 0.1s;
+      }
+
+      &--bottom {
+        bottom: 0;
+        width: 75%;
+      }
+    }
+
+    &__burger:hover &__burger-item {
+      &--top {
+        width: 100%;
+      }
+
+      &--bottom {
+        width: 100%;
+      }
+    }
+
+    &__burger--opened &__burger-item {
+      transform-origin: center;
+      top: 50%;
+
+      &--top {
+        width: 94%;
+        transform: rotate(45deg) translateY(-50%);
+      }
+
+      &--middle {
+        width: 0;
+      }
+
+      &--bottom {
+        width: 95%;
+        transform: rotate(-45deg) translateY(-50%) translateX(1%);
+      }
+    }
+
+    &__burger--opened:hover {
+      transform: rotate(90deg);
+
+      &__burger-item {
+        top: 50%;
+        left: 0;
+
+        &--top {
+          width: 94%;
+          transform: rotate(45deg) translateY(-50%);
+        }
+
+        &--middle {
+          width: 0;
+        }
+
+        &--bottom {
+          width: 95%;
+          transform: rotate(-45deg) translateY(-50%) translateX(1%);
+        }
+      }
+    }
+
+    &__logo {
+      margin-left: 90px;
+    }
+
+    &__phone {
+      &--not-tablet {
+        display: none;
+      }
+
+      &--tablet {
+        display: flex;
+      }
+    }
+
+    &__application {
+      margin-left: -12px;
+
+      &--not-tablet {
+        display: none;
+      }
+
+      &--tablet {
+        display: flex;
+      }
+    }
+
+    &__navigation {
+      position: fixed;
+      top: calc(var(--header-height, 110px) - 1px);
+      bottom: 0;
+      left: -100%;
+      right: 0;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-left: 0;
+      padding: 60px 50px 50px;
+      // height hack
+      height: calc(var(--vh, 1vh) * 100 - var(--header-height, 110px) + 1px);
+      box-sizing: border-box;
+      background-color: var(--color-darkgray);
+      transition: left 0.5s ease-in-out;
+
+      &--opened {
+        left: 0;
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      row-gap: 15px;
+    }
+
+    &__list-item-link {
+      font-size: 36px;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: var(--color-gray);
+      transition-property: -webkit-text-fill-color, -webkit-text-stroke-color;
+      transition-duration: 0.3s, 0.2s;
+      transition-timing-function: ease;
+      transition-delay: 0s, 0.2s;
+
+      &:hover {
+        -webkit-text-fill-color: var(--color-white);
+        -webkit-text-stroke-color: var(--color-white);
+      }
+    }
+  }
+}
+
+@media (max-width: $max-width-mobile) {
+  .page-header {
+    &__wrapper {
+      padding: 20px 16px;
+    }
+
+    &__logo {
+      margin-left: auto;
+      width: 113px;
+      height: 40px;
+    }
+
+    &__phone {
+      margin-top: auto;
+      margin-left: 0;
+      width: 330px;
+
+      &--not-tablet {
+        display: flex;
+      }
+
+      &--tablet {
+        display: none;
+      }
+    }
+
+    &__phone-border-small {
+      display: none;
+    }
+
+    &__phone-border-big {
+      display: block;
+      stroke: var(--color-white);
+      fill: none;
+    }
+
+    &__application {
+      margin-top: 5px;
+      margin-left: 0;
+
+      &--not-tablet {
+        display: flex;
+      }
+
+      &--tablet {
+        display: none;
+      }
+    }
+
+    &__navigation {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 16px 20px;
+    }
   }
 }

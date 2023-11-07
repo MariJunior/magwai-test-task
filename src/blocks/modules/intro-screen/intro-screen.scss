@@ -17,11 +17,10 @@
     position: absolute;
     z-index: -5;
 
-    // TODO: заменить на динамичную переменную — высоту хедера
-    top: 116px;
+    top: var(--header-height, 110px);
     left: 0;
     width: 100%;
-    height: calc(100% - 116px);
+    height: calc(100% - var(--header-height, 110px));
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
     background-image:
@@ -36,7 +35,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     height: 100%;
-    padding: 0 100px 95px;
+    padding: calc(var(--header-height, 110px) + 20px) 100px 95px;
     row-gap: 40px;
   }
 

@@ -1,10 +1,28 @@
 <header class="page-header">
   <div class="page-header__wrapper container">
-    <button class="page-header__burger" type="button" aria-label="Open mobile menu">
-      <span class="page-header__burger-item page-header__burger-item--top"></span>
-      <span class="page-header__burger-item page-header__burger-item--middle"></span>
-      <span class="page-header__burger-item page-header__burger-item--bottom"></span>
+    <button 
+      class="page-header__burger" 
+      id="main-menu-toggler"
+      type="button" 
+      aria-label="Open mobile menu"
+    >
+      <span 
+        class="page-header__burger-item page-header__burger-item--top"
+        aria-hidden="true"
+      >
+      </span>
+      <span 
+        class="page-header__burger-item page-header__burger-item--middle"
+        aria-hidden="true"
+      >
+      </span>
+      <span 
+        class="page-header__burger-item page-header__burger-item--bottom"
+        aria-hidden="true"
+      >
+      </span>
     </button>
+
     <a
       class="page-header__logo"
       href="https://magwai.ru/"
@@ -16,6 +34,7 @@
         <use xlink:href="img/sprites/sprite.svg#magwai-logo"></use>
       </svg>
     </a>
+
     <a
       class="page-header__phone page-header__phone--tablet"
       href="tel:+79516638146"
@@ -25,7 +44,7 @@
         class="page-header__phone-icon page-header__phone-icon--border"
         role="presentation"
       >
-        <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed"></use>
+        <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-outline-small"></use>
       </svg>
       <svg
         class="page-header__phone-icon page-header__phone-icon--phone"
@@ -52,10 +71,13 @@
         <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-thin"></use>
       </svg>
     </button>
-    <nav class="page-header__navigation">
+
+    <nav 
+      class="page-header__navigation"
+      id="main-menu"
+    >
       <ul class="page-header__list">
         <li class="page-header__list-item">
-          <!-- TODO: доабавить логику выделения активной ссылки (?) -->
           <a class="page-header__list-item-link" href="/services">Услуги</a>
         </li>
         <li class="page-header__list-item">
@@ -77,6 +99,7 @@
           <a class="page-header__list-item-link" href="/contacts">Контакты</a>
         </li>
       </ul>
+
       <a
         class="page-header__phone page-header__phone--not-tablet"
         href="tel:+79516638146"
@@ -86,7 +109,8 @@
           class="page-header__phone-icon page-header__phone-icon--border"
           role="presentation"
         >
-          <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed"></use>
+          <use class="page-header__phone-border-small" xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-outline-small"></use>
+          <use class="page-header__phone-border-big" xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-outline-big"></use>
         </svg>
         <svg
           class="page-header__phone-icon page-header__phone-icon--phone"
@@ -96,7 +120,7 @@
         </svg>
       </a>
       <button
-        class="page-header__application page-header__application--not-tablet skewed-filled-button"
+        class="page-header__application page-header__application--not-tablet skewed-filled-button skewed-filled-button--fullwidth"
         type="button"
       >
         Оставить заявку
@@ -104,7 +128,8 @@
           class="skewed-filled-button__icon skewed-filled-button__icon--big"
           role="presentation"
         >
-          <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-big"></use>
+          <use class="skewed-filled-button__icon-big--normal" xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-big"></use>
+          <use class="skewed-filled-button__icon-big--wide" xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-outline-big"></use>
         </svg>
         <svg
           class="skewed-filled-button__icon skewed-filled-button__icon--small"

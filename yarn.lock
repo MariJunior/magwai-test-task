@@ -7915,6 +7915,7 @@ bem-tools-create@bem-tools/bem-tools-create:
     imagemin-webp: "npm:^6.0.0"
     imagemin-zopfli: "npm:^7.0.0"
     lint-staged: "npm:^12.3.5"
+    lodash: "npm:^4.17.21"
     postcss: "npm:^8.4.8"
     postcss-scss: "npm:^4.0.3"
     require-dir: "npm:^1.2.0"
