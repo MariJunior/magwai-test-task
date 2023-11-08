@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Magwai test task</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body class="page-body">
+    <header class="page-header">
+  <div class="page-header__wrapper container">
+    <button 
+      class="page-header__burger" 
+      id="main-menu-toggler"
+      type="button" 
+      aria-label="Open mobile menu"
+    >
+      <span 
+        class="page-header__burger-item page-header__burger-item--top"
+        aria-hidden="true"
+      >
+      </span>
+      <span 
+        class="page-header__burger-item page-header__burger-item--middle"
+        aria-hidden="true"
+      >
+      </span>
+      <span 
+        class="page-header__burger-item page-header__burger-item--bottom"
+        aria-hidden="true"
+      >
+      </span>
+    </button>
+
+    <a
+      class="page-header__logo"
+      href="https://magwai.ru/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Веб-студия Магвай"
+    >
+      <svg class="page-header__logo-icon" role="presentation">
+        <use xlink:href="img/sprites/sprite.svg#magwai-logo"></use>
+      </svg>
+    </a>
+
+    <a
+      class="page-header__phone page-header__phone--tablet"
+      href="tel:+79516638146"
+      aria-label="Позвонить, чтобы оставить заявку"
+    >
+      <svg
+        class="page-header__phone-icon page-header__phone-icon--border"
+        role="presentation"
+      >
+        <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-outline-small"></use>
+      </svg>
+      <svg
+        class="page-header__phone-icon page-header__phone-icon--phone"
+        role="presentation"
+      >
+        <use xlink:href="img/sprites/sprite.svg#icon-phone"></use>
+      </svg>
+    </a>
+    <button
+      class="page-header__application page-header__application--tablet skewed-filled-button"
+      type="button"
+    >
+      Оставить заявку
+      <svg
+        class="skewed-filled-button__icon skewed-filled-button__icon--big"
+        role="presentation"
+      >
+        <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-big"></use>
+      </svg>
+      <svg
+        class="skewed-filled-button__icon skewed-filled-button__icon--small"
+        role="presentation"
+      >
+        <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-thin"></use>
+      </svg>
+    </button>
+
+    <nav 
+      class="page-header__navigation"
+      id="main-menu"
+    >
+      <ul class="page-header__list">
+        <li class="page-header__list-item">
+          <a class="page-header__list-item-link" href="/services">Услуги</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="page-header__list-item-link" href="/abonements">Абонементы</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="page-header__list-item-link" href="/why-we">Почему мы</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="page-header__list-item-link" href="/equipment">Оборудование</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="page-header__list-item-link" href="/sales">Акции</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="page-header__list-item-link" href="/faq">FAQ</a>
+        </li>
+        <li class="page-header__list-item">
+          <a class="page-header__list-item-link" href="/contacts">Контакты</a>
+        </li>
+      </ul>
+
+      <a
+        class="page-header__phone page-header__phone--not-tablet"
+        href="tel:+79516638146"
+        aria-label="Позвонить, чтобы оставить заявку"
+      >
+        <svg
+          class="page-header__phone-icon page-header__phone-icon--border"
+          role="presentation"
+        >
+          <use class="page-header__phone-border-small" xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-outline-small"></use>
+          <use class="page-header__phone-border-big" xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-outline-big"></use>
+        </svg>
+        <svg
+          class="page-header__phone-icon page-header__phone-icon--phone"
+          role="presentation"
+        >
+          <use xlink:href="img/sprites/sprite.svg#icon-phone"></use>
+        </svg>
+      </a>
+      <button
+        class="page-header__application page-header__application--not-tablet skewed-filled-button skewed-filled-button--fullwidth"
+        type="button"
+      >
+        Оставить заявку
+        <svg
+          class="skewed-filled-button__icon skewed-filled-button__icon--big"
+          role="presentation"
+        >
+          <use class="skewed-filled-button__icon-big--normal" xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-big"></use>
+          <use class="skewed-filled-button__icon-big--wide" xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-outline-big"></use>
+        </svg>
+        <svg
+          class="skewed-filled-button__icon skewed-filled-button__icon--small"
+          role="presentation"
+        >
+          <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-thin"></use>
+        </svg>
+      </button>
+    </nav>
+  </div>
+</header>
+    <section class="intro-screen">
+  <div class="intro-screen__background-wrapper"></div>
+
+  <div class="intro-screen__wrapper container">
+    <h1 class="intro-screen__title">Полет Илона Маска и DOGIE COIN</h1>
+    
+    <p class="intro-screen__lead">
+      В прошлый четверг все офигели от полета DOGIE COIN на марс.
+    </p>
+
+    <button
+      class="intro-screen__application skewed-filled-button"
+      type="button"
+    >
+      Оставить заявку
+      <svg
+        class="skewed-filled-button__icon skewed-filled-button__icon--big"
+        role="presentation"
+      >
+        <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-big"></use>
+      </svg>
+      <svg
+        class="skewed-filled-button__icon skewed-filled-button__icon--small"
+        role="presentation"
+      >
+        <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-thin"></use>
+      </svg>
+    </button>
+  </div>
+</section>
+    <section class="cards container">
+  <h2 class="cards__title">Карточки</h2>
+
+  <ul class="cards__list">
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-1.webp 1x, img/cards/card-1@2x.webp 2x">
+          <img
+            src="img/cards/card-1.jpg"
+            srcset="img/cards/card-1@2x.jpg 2x"
+            alt="Обложка карточки 1"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">bridge</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo(!)rem. Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorem.
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-2.webp 1x, img/cards/card-2@2x.webp 2x">
+          <img
+            src="img/cards/card-2.jpg"
+            srcset="img/cards/card-2@2x.jpg 2x"
+            alt="Обложка карточки 2"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">Water</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-3.webp 1x, img/cards/card-3@2x.webp 2x">
+          <img
+            src="img/cards/card-3.jpg"
+            srcset="img/cards/card-3@2x.jpg 2x"
+            alt="Обложка карточки 3"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">bridge</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-4.webp 1x, img/cards/card-4@2x.webp 2x">
+          <img
+            src="img/cards/card-4.jpg"
+            srcset="img/cards/card-4@2x.jpg 2x"
+            alt="Обложка карточки 4"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">Water</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-5.webp 1x, img/cards/card-5@2x.webp 2x">
+          <img
+            src="img/cards/card-5.jpg"
+            srcset="img/cards/card-5@2x.jpg 2x"
+            alt="Обложка карточки 5"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">forest</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-6.webp 1x, img/cards/card-6@2x.webp 2x">
+          <img
+            src="img/cards/card-6.jpg"
+            srcset="img/cards/card-6@2x.jpg 2x"
+            alt="Обложка карточки 6"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">Water</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-7.webp 1x, img/cards/card-7@2x.webp 2x">
+          <img
+            src="img/cards/card-7.jpg"
+            srcset="img/cards/card-7@2x.jpg 2x"
+            alt="Обложка карточки 7"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">forest</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-8.webp 1x, img/cards/card-8@2x.webp 2x">
+          <img
+            src="img/cards/card-8.jpg"
+            srcset="img/cards/card-8@2x.jpg 2x"
+            alt="Обложка карточки 8"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">nature</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-9.webp 1x, img/cards/card-9@2x.webp 2x">
+          <img
+            src="img/cards/card-9.jpg"
+            srcset="img/cards/card-9@2x.jpg 2x"
+            alt="Обложка карточки 9"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">forest</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-10.webp 1x, img/cards/card-10@2x.webp 2x">
+          <img
+            src="img/cards/card-10.jpg"
+            srcset="img/cards/card-10@2x.jpg 2x"
+            alt="Обложка карточки 10"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title">nature</h3>
+          <strong class="card__lead">
+            How to increase your productivity with a Music
+          </strong>
+          <p class="card__preview">
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…
+          </p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author">Eugenia</cite>, on 
+            <time datetime="2019-07-24">July 24, 2019</time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+  </ul>
+
+  <button
+    class="cards__load-more skewed-filled-button"
+    type="button"
+  >
+    Загрузить ещё
+    <svg
+      class="skewed-filled-button__icon skewed-filled-button__icon--big"
+      role="presentation"
+    >
+      <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-big"></use>
+    </svg>
+    <svg
+      class="skewed-filled-button__icon skewed-filled-button__icon--small"
+      role="presentation"
+    >
+      <use xlink:href="img/sprites/sprite.svg#icon-rectangle-skewed-thin"></use>
+    </svg>
+  </button>
+
+  <template id="card-template">
+    <li class="cards__list-item">
+      <article class="card">
+        <picture class="card__cover">
+          <source type="image/webp" srcset="img/cards/card-10.webp 1x, img/cards/card-10@2x.webp 2x">
+          <img
+            src="img/cards/card-10.jpg"
+            srcset="img/cards/card-10@2x.jpg 2x"
+            alt="Обложка карточки"
+          >
+        </picture>
+        <div class="card__content">
+          <h3 class="card__title"></h3>
+          <strong class="card__lead"></strong>
+          <p class="card__preview"></p>
+          <p class="card__info">
+            Posted by 
+            <cite class="card__author"></cite>, on 
+            <time datetime="2019-07-24"></time>
+          </p>
+          <a class="card__continue" href="/">Continue reading</a>
+        </div>
+      </article>
+    </li>
+  </template>
+</section>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
