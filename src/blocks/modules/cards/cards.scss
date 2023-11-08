@@ -79,9 +79,11 @@
     color: var(--color-gray);
 
     // хак для работы свойства line-clamp
-    display: -webkit-box; // stylelint-disable property-no-vendor-prefix
+    // stylelint-disable property-no-vendor-prefix, value-no-vendor-prefix
+    display: -webkit-box;
     -webkit-line-clamp: 6;
-    -webkit-box-orient: vertical; // stylelint-disable property-no-vendor-prefix
+    -webkit-box-orient: vertical;
+    // stylelint-enable property-no-vendor-prefix, value-no-vendor-prefix
     overflow-y: hidden;
   }
 

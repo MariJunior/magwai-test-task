@@ -16,15 +16,15 @@
   &__background-wrapper {
     position: absolute;
     z-index: -5;
-
     top: var(--header-height, 110px);
     left: 0;
     width: 100%;
     height: calc(100% - var(--header-height, 110px));
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
-    background-image:
-      image-set("/img/space-background.jpg" 1x, "/img/space-background@2x.jpg" 2x, "/img/space-background@3x.jpg" 3x);
+    // stylelint-disable max-line-length
+    background-image: image-set("/img/space-background.jpg" 1x, "/img/space-background@2x.jpg" 2x, "/img/space-background@3x.jpg" 3x);
+    // stylelint-enable max-line-length
     background-size: cover;
     background-repeat: no-repeat;
   }
