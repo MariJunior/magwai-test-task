@@ -80,6 +80,14 @@ h1, h2, h3, h4, h5, h6, ul {
       transform: skewX(-10deg) translateX(10px);
     }
   }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:disabled:hover &__icon {
+    transform: none;
+  }
 }
 
 @media (max-width: $min-width-tablet) {
