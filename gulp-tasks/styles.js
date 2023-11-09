@@ -1,19 +1,20 @@
 "use strict";
 
-import { paths } from "../gulpfile.babel";
-import gulp from "gulp";
-import gulpif from "gulp-if";
-import rename from "gulp-rename";
-import dartsass from "sass";
-import gulpsass from "gulp-sass";
-import mincss from "gulp-clean-css";
-import groupmedia from "gulp-group-css-media-queries";
-import autoprefixer from "gulp-autoprefixer";
-import sourcemaps from "gulp-sourcemaps";
-import plumber from "gulp-plumber";
 import browsersync from "browser-sync";
+import gulp from "gulp";
+import autoprefixer from "gulp-autoprefixer";
+import mincss from "gulp-clean-css";
 import debug from "gulp-debug";
+import groupmedia from "gulp-group-css-media-queries";
+import gulpif from "gulp-if";
+import plumber from "gulp-plumber";
+import rename from "gulp-rename";
+import replace from "gulp-replace";
+import gulpsass from "gulp-sass";
+import sourcemaps from "gulp-sourcemaps";
+import dartsass from "sass";
 import yargs from "yargs";
+import { paths } from "../gulpfile.babel";
 
 const sass = gulpsass(dartsass);
 const argv = yargs.argv,
@@ -29,6 +30,10 @@ gulp.task("styles", () => {
             cascade: false,
             grid: true
         })))
+        .pipe(gulpif(production, replace(
+            "\"\/img\/", 
+            "\"..\/img\/"
+        )))
         .pipe(gulpif(production, mincss({
             compatibility: "ie8", level: {
                 1: {
